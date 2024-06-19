@@ -10,8 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^7.10.2",
+    "@mantine/form": "^7.10.2",
+    "@mantine/hooks": "^7.10.2",
+    "@tabler/icons-react": "^3.6.0",
+    "postcss-functions": "^4.0.2",
+    "postcss-mixins": "^10.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
