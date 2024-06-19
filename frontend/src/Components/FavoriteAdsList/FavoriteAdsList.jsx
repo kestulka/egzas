@@ -3,8 +3,6 @@ import Header from "../Header/Header";
 import React, { useEffect, useState } from "react";
 import AdCard from "../Card/AdCard";
 import { Container, Title, Divider, TextInput } from "@mantine/core";
-// import { UseNavigate, useNavigate } from "react-router-dom";
-import classes from "./FavoriteAdsList.module.css";
 import styles from "./FavoriteAdsList.module.css";
 
 const FavoriteAdsList = ({ user, setUser }) => {

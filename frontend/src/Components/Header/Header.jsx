@@ -1,5 +1,3 @@
-/** @format */
-
 import {
   HoverCard,
   Group,
@@ -61,7 +59,7 @@ const Header = ({ user, onCategorySelect }) => {
       key={category._id}
       onClick={() => onCategorySelect(category._id)}
     >
-      <Text size="sm" fw={500}>
+      <Text size="l" fw={700} c="green" td="underline">
         {category.name}
       </Text>
     </UnstyledButton>
@@ -72,9 +70,17 @@ const Header = ({ user, onCategorySelect }) => {
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a className={classes.link} href="" onClick={() => navigate("/")}>
+            <Button
+              className={classes.link}
+              href=""
+              onClick={() => navigate("/")}
+              variant="filled"
+              color="pink"
+              size="md"
+              radius="lg"
+            >
               Home
-            </a>
+            </Button>
             <HoverCard
               width={600}
               position="bottom"
@@ -83,7 +89,15 @@ const Header = ({ user, onCategorySelect }) => {
               withinPortal
             >
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <Button
+                  variant="filled"
+                  color="orange"
+                  size="sm"
+                  radius="lg"
+                  ml={105}
+                  href="#"
+                  className={classes.link}
+                >
                   <Center inline>
                     <Box component="span" mr={5}>
                       Categories
@@ -93,7 +107,7 @@ const Header = ({ user, onCategorySelect }) => {
                       color={theme.colors.blue[6]}
                     />
                   </Center>
-                </a>
+                </Button>
               </HoverCard.Target>
 
               <HoverCard.Dropdown style={{ overflow: "hidden" }}>
@@ -114,52 +128,73 @@ const Header = ({ user, onCategorySelect }) => {
             <>
               {user.role === "user" && (
                 <>
-                  <a
+                  <Button
+                    variant="filled"
+                    color="orange"
+                    size="sm"
+                    radius="lg"
                     href=""
                     className={classes.link}
                     onClick={() => navigate("/favoriteAds")}
                   >
                     Favorite Ads
-                  </a>
-                  <a
+                  </Button>
+                  <Button
+                    variant="filled"
+                    color="orange"
+                    size="sm"
+                    radius="lg"
                     href=""
                     className={classes.link}
                     onClick={() => navigate("/myAds")}
                   >
                     My ads
-                  </a>
-                  <a
+                  </Button>
+                  <Button
+                    variant="filled"
+                    color="orange"
+                    size="sm"
+                    radius="lg"
                     href=""
                     className={classes.link}
                     onClick={() => navigate("/createAd")}
                   >
                     Upload new ad
-                  </a>
+                  </Button>
                 </>
               )}
               {user.role === "admin" && (
                 <>
-                  <a
+                  <Button
+                    variant="filled"
+                    color="red"
+                    radius="lg"
                     href=""
                     className={classes.link}
                     onClick={() => navigate("/createCategory")}
                   >
                     Add new category
-                  </a>
-                  <a
+                  </Button>
+                  <Button
+                    variant="filled"
+                    color="red"
+                    radius="lg"
                     href=""
                     className={classes.link}
                     onClick={() => navigate("/blockAdPage")}
                   >
                     Block ad
-                  </a>
-                  <a
+                  </Button>
+                  <Button
+                    variant="filled"
+                    color="red"
+                    radius="lg"
                     href=""
                     className={classes.link}
                     onClick={() => navigate("/blockUserPage")}
                   >
                     Block user
-                  </a>
+                  </Button>
                 </>
               )}
             </>

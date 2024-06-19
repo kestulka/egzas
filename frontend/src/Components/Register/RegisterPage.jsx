@@ -55,7 +55,7 @@ function RegisterPage() {
   return (
     <>
       <Header user={user} />
-      <Container>
+      <Container justify="center">
         <Title mt={50}>Register</Title>
         {error && <Text color="red">{error}</Text>}
         <Paper withBorder shadow="md" p={30} mt={30} radius="md">
